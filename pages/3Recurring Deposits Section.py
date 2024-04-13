@@ -132,13 +132,13 @@ def showrdaccount():
                 {
                     head1: counter,
                     'Opening Balance': round(balance, roundby),
-                    'Instalment': round(instal, roundby),
-                    'Total': round(balance + instal, roundby),
+                    'Instalment': round(instal1, roundby),
+                    'Total': round(balance + instal1, roundby),
                     'Interest': round(interest, roundby),
-                    'Closing Balance': round(balance + interest + instal, roundby)
+                    'Closing Balance': round(balance + interest + instal1, roundby)
                 }    
             )        
-            balance = balance + interest + instal
+            balance = balance + interest + instal1
             counter = counter + 1
             inscount = inscount + 1
             interest = 0
@@ -149,8 +149,7 @@ def showrdaccount():
             total2 = total2 + i["Interest"]
     st.session_state.rd_df = pd.DataFrame( reportarr )
     st.session_state.rdinstalment = round(total1, roundby)
-    st.session_state.rdinterest = round(total2, roundby)
-    
+    st.session_state.rdinterest = round(total2, roundby)    
 
 
 def rd_inst_calc():
