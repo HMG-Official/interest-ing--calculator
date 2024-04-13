@@ -1,7 +1,12 @@
-# Welcome to streamlit
+# Welcome to Interest(ing) Calculator
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+There are three sections in the Interest(ing) Calculator. 
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+1. Loan Section
+2. Fixed Deposit Section
+3. Recurring Deposit Section
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+In all the pages, any value can be calculated if you enter all the other values. The advantage of Interest(ing) Calculator is the possibility of changing the compounding period and frequency of the loan/deposits.
+
+This calculator is developed in Python and Streamlit by S. Rathinagiri (srathinagiri@gmail.com).
+
