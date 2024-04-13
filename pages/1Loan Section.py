@@ -375,9 +375,11 @@ def loan_rate_calc():
     showloanaccount()
 
     
-
-st.image("./pages/LoanSection.jpg")
-st.write("# :red[Loan Section]")
+[image,title] = st.columns([0.5,0.5])
+with image:
+    st.image("./pages/LoanSection.jpg")
+with title:   
+    st.write("# :red[Loan Section]")
 [col1, col2] = st.columns([0.3, 0.7])
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
