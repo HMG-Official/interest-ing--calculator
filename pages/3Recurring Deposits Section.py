@@ -138,7 +138,7 @@ def showrdaccount():
                     'Closing Balance': round(balance + interest + instal, roundby)
                 }    
             )        
-            balance = balance + interest + instal1
+            balance = balance + interest + instal
             counter = counter + 1
             inscount = inscount + 1
             interest = 0
