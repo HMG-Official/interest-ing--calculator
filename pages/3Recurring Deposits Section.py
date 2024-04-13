@@ -179,7 +179,7 @@ def rd_inst_calc():
     elif yearlyinstalments < yearlycompoundings:
         m = intrate / yearlycompoundings
         total1 = (1+m)**(yearlycompoundings / yearlyinstalments)
-        for i in range(2, period+1):
+        for i in range(2, int(period)+1):
             total1 = total1 + 1
             total1 = (total1 * (1+m)**(yearlycompoundings / yearlyinstalments))
         instal = maturity / total1
@@ -224,7 +224,7 @@ def rd_term_calc():
         while not crossed:
             m = intrate / yearlycompoundings
             total1 = (1+m)**x
-            for i in range(2, period + 1 ):
+            for i in range(2, int(period) + 1 ):
                 total1 = total1 + 1
                 total1 = (total1 * (1+m)** x)
             if total1 * instal >= maturity:
@@ -261,7 +261,7 @@ def rd_matu_calc():
     elif yearlyinstalments < yearlycompoundings:
         m = intrate / yearlycompoundings
         total1 = (1+m)**(yearlycompoundings / yearlyinstalments)
-        for i in range(2, period+1):
+        for i in range(2, int(period)+1):
             total1 = total1 + 1
             total1 = (total1 * (1+m)**(yearlycompoundings / yearlyinstalments))
         maturity = total1 * instal
