@@ -252,8 +252,11 @@ def fd_rate_calc():
 
     
 
-
-st.write("# :blue[Fixed Deposits Section]")
+[image, title] = st.columns[0.5, 0.5]
+with image:
+    st.image("./pages/FixedDepositSection.jpg")
+with title:
+    st.write("# :blue[Fixed Deposits Section]")
 [col1, col2] = st.columns([0.3, 0.7])
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
