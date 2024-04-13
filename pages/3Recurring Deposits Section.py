@@ -325,7 +325,7 @@ def rd_rate_calc():
 [image, title] = st.columns([0.5, 0.5])
 with image:
     st.image("./pages/RecurringDepositSection.jpg")
-with title"
+with title:
     st.write("# :green[Recurring Deposits Section]")
 [col1, col2] = st.columns([0.3, 0.7])
 with col1:
