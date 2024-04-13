@@ -252,7 +252,7 @@ def fd_rate_calc():
 
     
 
-[image, title] = st.columns[0.5, 0.5]
+[image, title] = st.columns([0.5, 0.5])
 with image:
     st.image("./pages/FixedDepositSection.jpg")
 with title:
