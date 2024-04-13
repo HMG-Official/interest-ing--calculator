@@ -322,8 +322,11 @@ def rd_rate_calc():
     st.session_state.rd_rate = intrate * 100
     showrdaccount()
 
-
-st.write("# :green[Recurring Deposits Section]")
+[image, title] = st.columns([0.5, 0.5])
+with image:
+    st.image("./pages/RecurringDepositSection.jpg")
+with title"
+    st.write("# :green[Recurring Deposits Section]")
 [col1, col2] = st.columns([0.3, 0.7])
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
