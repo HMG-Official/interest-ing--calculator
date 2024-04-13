@@ -376,7 +376,7 @@ def loan_rate_calc():
 
     
 
-
+st.image("LoanSection.jpg")
 st.write("# :red[Loan Section]")
 [col1, col2] = st.columns([0.3, 0.7])
 with col1:
