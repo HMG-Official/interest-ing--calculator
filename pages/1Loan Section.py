@@ -380,7 +380,7 @@ with image:
     st.image("./pages/LoanSection.jpg")
 with title:   
     st.write("# :red[Loan Section]")
-col1 = st.columns(1)
+[col1, col2] = st.columns([0.9, 0.1])
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
     st.selectbox("Compounding",("Monthly", "Quarterly","Half Yearly","Yearly"), label_visibility="collapsed", key="loan_comp")
@@ -394,7 +394,7 @@ with col1:
     st.number_input("Instalment", min_value=0.0, label_visibility="collapsed", key="loan_inst")
     st.button("Instalment Frequency", disabled=True, use_container_width=True)
     st.selectbox("Frequency",("Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="loan_freq")
-# with col2:
+with col2:
 df = st.session_state.loan_df
 if df.shape[0] > 0:
     st.write( df )
