@@ -290,7 +290,5 @@ if df.shape[0] > 0:
     )
     c1 = base.mark_arc(innerRadius=20, stroke="#fff")
     st.write(c1)
-    
-    st.info("Done!")
     st.session_state.fd_df = pd.DataFrame( [] )
     st.session_state.fdinterest = 0.0
