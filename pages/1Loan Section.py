@@ -404,7 +404,7 @@ if df.shape[0] > 0:
     chartdata[ "Principal" ] = chartdata[ "Repayment" ] - chartdata[ "Interest Charged" ]
     chartdata = chartdata[ [chartdata.columns[0], "Interest Charged", "Principal" ] ]
     chart_data_long = chartdata.melt(id_vars=chartdata.columns[0], var_name='Category', value_name='Value')
-    chart = alt.Chart(chart_data_long).mark_area().encode(
+    chart = alt.Chart(chart_data_long).mark_bar().encode(
         x=chartdata.columns[0]+':O',
         y='Value:Q',
         color='Category:N',
