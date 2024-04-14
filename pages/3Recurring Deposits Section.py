@@ -331,16 +331,16 @@ with title:
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
     st.selectbox("Compounding",("Daily", "Monthly", "Quarterly","Half Yearly","Yearly"), label_visibility="collapsed", key="rd_comp")
+    st.button("Instalment Frequency", disabled=True, use_container_width=True)
+    st.selectbox("Frequency",("Days", "Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="rd_freq")
     st.button("Deposit Amount", on_click=rd_inst_calc, use_container_width=True)
-    st.number_input("Deposit", min_value=0.0, label_visibility="collapsed", key="rd_inst")
+    st.number_input("Deposit", min_value=0.0, step=1000.0, label_visibility="collapsed", key="rd_inst")
     st.button("Interest Rate (% p.a.)", on_click=rd_rate_calc, use_container_width=True)
     st.number_input("Interest Rate", min_value=0.0, label_visibility="collapsed", key="rd_rate")
     st.button("Term", on_click=rd_term_calc, use_container_width=True)
     st.number_input("Term", min_value=0.0,  label_visibility="collapsed", key="rd_term")
     st.button("Maturity Value", on_click=rd_matu_calc, use_container_width=True)
     st.number_input("Maturity", min_value=0.0, label_visibility="collapsed", key="rd_matu")
-    st.button("Instalment Frequency", disabled=True, use_container_width=True)
-    st.selectbox("Frequency",("Days", "Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="rd_freq")
 df = st.session_state.rd_df
 if df.shape[0] > 0:
     st.write( df )
