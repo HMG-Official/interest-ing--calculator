@@ -1,8 +1,8 @@
 import streamlit as st
 
 # About page content
-st.title("About :Red[Interest(ing) Calculator]")
-st.write("Welcome to Interest(ing) Calculator - a web app developed by :blue[Rathinagiri Subbiah].")
+st.write(# "About :Red[Interest(ing) Calculator]")
+st.write("Welcome to Interest(ing) Calculator - a web app developed by :rainbow[Rathinagiri Subbiah].")
 
 st.subheader("Developer Information")
 st.write("Developer: :blue[Rathinagiri Subbiah]")
