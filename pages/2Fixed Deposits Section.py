@@ -283,10 +283,10 @@ if df.shape[0] > 0:
         tooltip=[chartdata.columns[0], "Closing Balance"]
     )
     st.write(chart)
-    base = alt.Chart(df[ ["Closing Balance"] ], title="Fixed Deposit Growth").encode(
-        alt.Theta("Closing Balance:Q").stack(True),
-        alt.Radius("Closing Balance").scale(type="sqrt", zero=True, rangeMin=20),
-        color=alt.Color("Closing Balance:N").legend(None),
+    base = alt.Chart(df[ ["Interest"] ], title="Fixed Deposit Interest Growth").encode(
+        alt.Theta("Interest:Q").stack(True),
+        alt.Radius("Interest").scale(type="sqrt", zero=True, rangeMin=20),
+        color=alt.Color("Interest:N").legend(None),
     )
     c1 = base.mark_arc(innerRadius=20, stroke="#fff")
     st.write(c1)
