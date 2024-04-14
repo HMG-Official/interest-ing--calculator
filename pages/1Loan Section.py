@@ -411,7 +411,13 @@ if df.shape[0] > 0:
         tooltip=[chartdata.columns[0], 'Category', 'Value']
     )
     st.write(chart)
-    st.info("Done!")
+    base = alt.Chart(chartdata[ ["Closing Balance"] ], title="Closing Balance").encode(
+        alt.Theta("Closing Balance:Q").stack(True),
+        alt.Radius("Closing Balance").scale(type="sqrt", zero=True, rangeMin=20),
+        color=alt.Color("Closing Balance:N").legend(None),
+    )
+    c1 = base.mark_arc(innerRadius=20, stroke="#fff")
+    st.write(c1)
     st.session_state.loan_df = pd.DataFrame( [] )
     st.session_state.interest = 0.0
     st.session_state.repayment = 0.0
