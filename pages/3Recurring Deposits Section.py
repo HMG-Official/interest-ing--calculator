@@ -378,7 +378,6 @@ if df.shape[0] > 0:
         st.write(c1)
     with col12:    
         st.write(c2)
-    st.info("Done!")
     st.session_state.rd_df = pd.DataFrame( [] )
     st.session_state.rdinterest = 0.0
     st.session_state.rdinstalment = 0.0
