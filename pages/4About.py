@@ -1,7 +1,7 @@
 import streamlit as st
 
 # About page content
-st.write("## :red[About Interest(ing) Calculator]")
+st.write("### :violet[About Interest(ing) Calculator]")
 st.write("Welcome to Interest(ing) Calculator - a free, open source web app for calculating Loan, Deposit variables.")
 
 st.subheader("Developer Information")
