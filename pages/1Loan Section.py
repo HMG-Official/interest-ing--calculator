@@ -375,7 +375,7 @@ def loan_rate_calc():
     showloanaccount()
 
     
-[image,title] = st.columns([0.5,0.5])
+[image,title,empty] = st.columns([0.25,0.25,0.5])
 with image:
     st.image("./pages/LoanSection.jpg")
 with title:   
