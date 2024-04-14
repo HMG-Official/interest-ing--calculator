@@ -6,10 +6,10 @@ st.write("Welcome to Interest(ing) Calculator - a free, open source web app for 
 
 st.subheader("Developer Information")
 st.write("Developer: :rainbow[Rathinagiri Subbiah]")
-st.write("Email: srathinagiri@gmail.com")
+st.write("Email: <srathinagiri@gmail.com>")
 
 st.subheader("Tools Used")
-st.write("This web app was built using :violet[**Python**] and :violet[**Streamlit**].")
+st.write("This web app was built using **[Python](https://www.python.org/)** and **[Streamlit](https://streamlit.io/)**.")
 
 st.subheader("Release Date")
 st.write("Release Date: 2024-04-14")
