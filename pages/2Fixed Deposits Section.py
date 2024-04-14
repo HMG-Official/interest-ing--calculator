@@ -252,26 +252,25 @@ def fd_rate_calc():
 
     
 
-[image, title] = st.columns([0.5, 0.5])
+[image, title, empty] = st.columns([0.25, 0.25, 0.5])
 with image:
     st.image("./pages/FixedDepositSection.jpg")
 with title:
     st.write("# :blue[Fixed Deposits Section]")
-[col1, col2] = st.columns([0.3, 0.7])
+[col1, col2] = st.columns([0.5, 0.5])
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
-    st.button("Deposit Amount", on_click=fd_prin_calc, use_container_width=True)
-    st.button("Interest Rate (% p.a.)", on_click=fd_rate_calc, use_container_width=True)
-    st.button("Term", on_click=fd_term_calc, use_container_width=True)
-    st.button("Maturity Value", on_click=fd_inst_calc, use_container_width=True)
-    st.button("Instalment Frequency", disabled=True, use_container_width=True)
-with col2:
     st.selectbox("Compounding",("Daily", "Monthly", "Quarterly","Half Yearly","Yearly"), label_visibility="collapsed", key="fd_comp")
-    st.number_input("Deposit", min_value=0.0, label_visibility="collapsed", key="fd_prin")
-    st.number_input("Interest Rate", min_value=0.0, label_visibility="collapsed", key="fd_rate")
-    st.number_input("Term", min_value=0.0,  label_visibility="collapsed", key="fd_term")
-    st.number_input("Maturity", min_value=0.0, label_visibility="collapsed", key="fd_inst")
+    st.button("Instalment Frequency", disabled=True, use_container_width=True)
     st.selectbox("Frequency",("Days", "Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="fd_freq")
+    st.button("Deposit Amount", on_click=fd_prin_calc, use_container_width=True)
+    st.number_input("Deposit", min_value=0.0, label_visibility="collapsed", key="fd_prin")
+    st.button("Interest Rate (% p.a.)", on_click=fd_rate_calc, use_container_width=True)
+    st.number_input("Interest Rate", min_value=0.0, label_visibility="collapsed", key="fd_rate")
+    st.button("Term", on_click=fd_term_calc, use_container_width=True)
+    st.number_input("Term", min_value=0.0,  label_visibility="collapsed", key="fd_term")
+    st.button("Maturity Value", on_click=fd_inst_calc, use_container_width=True)
+    st.number_input("Maturity", min_value=0.0, label_visibility="collapsed", key="fd_inst")
 df = st.session_state.fd_df
 if df.shape[0] > 0:
     st.write( df )
