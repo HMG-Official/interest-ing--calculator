@@ -380,7 +380,7 @@ with image:
     st.image("./pages/LoanSection.jpg")
 with title:   
     st.write("# :red[Loan Section]")
-[col1, col2] = st.columns([0.9, 0.1])
+[col1, col2] = st.columns([0.5, 0.5])
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
     st.selectbox("Compounding",("Monthly", "Quarterly","Half Yearly","Yearly"), label_visibility="collapsed", key="loan_comp")
