@@ -411,7 +411,7 @@ if df.shape[0] > 0:
         tooltip=[chartdata.columns[0], 'Category', 'Value']
     )
     st.write(chart)
-    base = alt.Chart(chartdata[ ["Closing Balance"] ], title="Closing Balance").encode(
+    base = alt.Chart(df[ ["Closing Balance"] ], title="Closing Balance").encode(
         alt.Theta("Closing Balance:Q").stack(True),
         alt.Radius("Closing Balance").scale(type="sqrt", zero=True, rangeMin=20),
         color=alt.Color("Closing Balance:N").legend(None),
