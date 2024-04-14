@@ -322,25 +322,24 @@ def rd_rate_calc():
     st.session_state.rd_rate = intrate * 100
     showrdaccount()
 
-[image, title] = st.columns([0.5, 0.5])
+[image, title, empty] = st.columns([0.25, 0.25, 0.5])
 with image:
     st.image("./pages/RecurringDepositSection.jpg")
 with title:
     st.write("# :green[Recurring Deposits Section]")
-[col1, col2] = st.columns([0.3, 0.7])
+[col1, col2] = st.columns([0.5, 0.5])
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
-    st.button("Deposit Amount", on_click=rd_inst_calc, use_container_width=True)
-    st.button("Interest Rate (% p.a.)", on_click=rd_rate_calc, use_container_width=True)
-    st.button("Term", on_click=rd_term_calc, use_container_width=True)
-    st.button("Maturity Value", on_click=rd_matu_calc, use_container_width=True)
-    st.button("Instalment Frequency", disabled=True, use_container_width=True)
-with col2:
     st.selectbox("Compounding",("Daily", "Monthly", "Quarterly","Half Yearly","Yearly"), label_visibility="collapsed", key="rd_comp")
+    st.button("Deposit Amount", on_click=rd_inst_calc, use_container_width=True)
     st.number_input("Deposit", min_value=0.0, label_visibility="collapsed", key="rd_inst")
+    st.button("Interest Rate (% p.a.)", on_click=rd_rate_calc, use_container_width=True)
     st.number_input("Interest Rate", min_value=0.0, label_visibility="collapsed", key="rd_rate")
+    st.button("Term", on_click=rd_term_calc, use_container_width=True)
     st.number_input("Term", min_value=0.0,  label_visibility="collapsed", key="rd_term")
+    st.button("Maturity Value", on_click=rd_matu_calc, use_container_width=True)
     st.number_input("Maturity", min_value=0.0, label_visibility="collapsed", key="rd_matu")
+    st.button("Instalment Frequency", disabled=True, use_container_width=True)
     st.selectbox("Frequency",("Days", "Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="rd_freq")
 df = st.session_state.rd_df
 if df.shape[0] > 0:
