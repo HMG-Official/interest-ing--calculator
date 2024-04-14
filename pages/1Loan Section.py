@@ -394,7 +394,7 @@ with col1:
     st.number_input("Instalment", min_value=0.0, label_visibility="collapsed", key="loan_inst")
     st.button("Instalment Frequency", disabled=True, use_container_width=True)
     st.selectbox("Frequency",("Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="loan_freq")
-with col2:
+
 df = st.session_state.loan_df
 if df.shape[0] > 0:
     st.write( df )
