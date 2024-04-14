@@ -384,6 +384,8 @@ with title:
 with col1:
     st.button("Interest Compounding", disabled=True, use_container_width=True)
     st.selectbox("Compounding",("Monthly", "Quarterly","Half Yearly","Yearly"), label_visibility="collapsed", key="loan_comp")
+    st.button("Instalment Frequency", disabled=True, use_container_width=True)
+    st.selectbox("Frequency",("Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="loan_freq")
     st.button("Principal", on_click=loan_prin_calc, use_container_width=True)
     st.number_input("Principal", min_value=0.0, label_visibility="collapsed", key="loan_prin")
     st.button("Interest Rate (% p.a.)", on_click=loan_rate_calc, use_container_width=True)
@@ -392,8 +394,6 @@ with col1:
     st.number_input("Term", min_value=0.0,  label_visibility="collapsed", key="loan_term")
     st.button("Instalment", on_click=loan_inst_calc, use_container_width=True)
     st.number_input("Instalment", min_value=0.0, label_visibility="collapsed", key="loan_inst")
-    st.button("Instalment Frequency", disabled=True, use_container_width=True)
-    st.selectbox("Frequency",("Months", "Quarters","Half Years","Years"), label_visibility="collapsed", key="loan_freq")
 
 df = st.session_state.loan_df
 if df.shape[0] > 0:
