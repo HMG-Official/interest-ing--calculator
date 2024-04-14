@@ -391,7 +391,7 @@ with col1:
     st.button("Interest Rate (% p.a.)", on_click=loan_rate_calc, help="Click to calculate Loan Interest Rate after entering all the other values.",use_container_width=True)
     st.number_input("Interest Rate", min_value=0.0, step=0.5, label_visibility="collapsed", key="loan_rate")
     st.button("Term", on_click=loan_term_calc, help="Click to calculate Number of Instalments after entering all the other values.", use_container_width=True)
-    st.number_input("Term", min_value=0.0,  step=1.0, label_visibility="collapsed", key="loan_term")
+    st.number_input("Term", min_value=0.0,  step=1.0, help="Enter number of instalments", label_visibility="collapsed", key="loan_term")
     st.button("Instalment", on_click=loan_inst_calc, help="Click to calculate Instalment amount after entering all the other values.", use_container_width=True)
     st.number_input("Instalment", min_value=0.0, step=1000.0, label_visibility="collapsed", key="loan_inst")
 
